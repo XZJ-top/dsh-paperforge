@@ -1,0 +1,14 @@
+# dsh-paperforge 插件补丁。
+#
+# 插入 paperforge 插件行：Host 端注册 paper_* 工具、/paper-* 命令与
+# paper-writing skill；论文工程默认落在 <home>/dsh/research/papers。
+#
+# 覆盖方式：在 profile 自己的 cordis.patch.yml 里追加同名 id 的 config 即可
+# （profile 层在该 bundle 层之后应用）：
+#
+# - id: paperforge
+#   config:
+#     papersRoot: /path/to/your/papers
+- insert:
+    - id: paperforge
+      name: dsh-paperforge

@@ -1,0 +1,43 @@
+{
+  "name": "dsh-paperforge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Let DSH autonomously produce a complete paper: real literature, outline, section writing, LaTeX compile/fix, citation audit, independent review, PDF export.",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "lib/**/*.js",
+    "skill",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "XZJ-top",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XZJ-top/dsh-paperforge.git"
+  },
+  "homepage": "https://github.com/XZJ-top/dsh-paperforge#readme",
+  "bugs": {
+    "url": "https://github.com/XZJ-top/dsh-paperforge/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "paper",
+    "latex",
+    "research",
+    "writing"
+  ],
+  "license": "MIT"
+}

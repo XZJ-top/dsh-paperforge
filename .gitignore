@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# paper projects and generated artifacts
+papers/
+*.pdf
+*.zip
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.xdv
+dist/
+.paper/
+
+# local / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.local
+.env
+.env.*
