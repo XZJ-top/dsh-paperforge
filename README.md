@@ -2,6 +2,21 @@
 
 让 DSH 自主完成一篇完整论文的本地插件：真实文献 → 大纲 → 分节写作 → LaTeX 编译修错 → 引用审计 → 独立审稿 → 导出 PDF。
 
+## English Summary
+
+`dsh-paperforge` is a local plugin for **DeepSeek Harness (DSH)** that lets an agent produce a complete paper end-to-end: real literature lookup (arXiv / Crossref), outline, per-section writing, LaTeX compilation with automatic error repair, citation audit, an independent reviewer subagent, PDF/ZIP export, and archival into **Zotero** and **Obsidian** through companion DSH plugins.
+
+It exposes **11 `paper_*` tools**, **7 `/paper-*` commands** and one **`paper-writing` skill**. Core design choices:
+
+- **Real metadata only** — every reference comes from an arXiv or Crossref response; there is no fallback that invents entries.
+- **No fabricated results** — every number must come from a tool output or user-provided data; otherwise the paper is written as a method/review paper and says so.
+- **Deterministic engineering, agentic writing** — tools own files, compilation and audit; the model owns prose and judgement.
+- **Independent reviewer** — a fresh subagent reads the files (never the author's summary) and checks citations, data provenance and claim support.
+
+Requirements: DSH 0.2.x, Node.js 22+, and a LaTeX distribution (MiKTeX or TeX Live) providing `xelatex` and `bibtex`. Optional: `dsh-zotero-paperbridge` and `dsh-obsidian-vaultbridge` for archival.
+
+Licensed under the MIT License.
+
 ## 能力
 
 **11 个工具（确定性工程操作）**
